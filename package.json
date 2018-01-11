@@ -1,0 +1,35 @@
+{
+  "name": "appreact",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.0.0",
+    "babel-plugin-import": "^1.6.2",
+    "history": "^4.7.2",
+    "react": "^16.2.0",
+    "react-app-rewired": "^1.3.6",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "proxy": {
+    "/dva": {
+      "target": "http://192.168.119.162:2222/dva/",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/dva": ""
+      }
+    }
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject"
+  }
+}
